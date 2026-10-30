@@ -43,3 +43,7 @@ Anchor: `e84cb50f88ce06caef5214c8d215e2700200772f` plus this unit's diff. PASS: 
 ## M9.1 — 2026-10-30
 
 Anchor: `2f4bc242d329f53130ceca8412c03fda0a029060` plus this unit's diff. PASS: core/skill structural validation; six security regression tests and two PR-event tests; 65 Markdown files checked for local targets; worktree 114 entries and reachable history 123 entries pass publication scans before this evidence update. Official action pins and six dependency/license records reviewed; OSV reports no advisories at this date (not proof of absence). Full final suite and post-commit staged/history scans remain M9.2. A synthetic credential URL initially self-triggered the worktree scanner; fixture construction corrected without weakening checks.
+
+## M9.2 — 2026-10-30
+
+Anchor: `ed560ad5458d641848099551dce94d357a02809f` plus this unit's diff. PASS: final committed candidate ed560ad full suite 56/56 in 37.535s, 0 failures/errors/skips; clean committed clone also 56/56 without ignored context. Installed core/PR/report validators and discovery pass, licenses present, private/build-state payload excluded, repeat NOOP. Four report CLIs, core conformance and pip check pass. Worktree/index each 115 entries and reachable history 153 entries pass scans; source and staged diffs reviewed. Mandatory local gates satisfied. Publication not attempted yet; next action reconcile authenticated gh-slee/agentic-sdlc state before authorized public create/push.
