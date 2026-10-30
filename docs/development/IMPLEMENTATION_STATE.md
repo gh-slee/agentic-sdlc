@@ -1,15 +1,14 @@
 # Implementation state
 
-- Stage: VERIFIED foundation. Publication: NOT STARTED.
-- Current milestone/task: M1 / M1.1.
-- Last verified completed task: M0.1, M0.2 (commit result must be confirmed). Completed milestones: M0.
-- Branch: main. Last verified committed anchor: none.
-- Working tree: foundation checkpoint being created; inspect Git outcome. Use Git reality on resume.
-- Architecture: ADR-000 repository/Git recovery; other decisions pending source audit and research.
-- Last successful checks: environment/tool availability, tracked source inventory.
-- Known failures: sandbox gh authentication invalid. Full tests not yet implemented/run.
-- Pending reviews: foundation public-safety review; all release gates.
-- Blockers: publication authentication unresolved; does not block local work.
-- Outstanding external side effects: none. No remote created or push attempted.
-- Remaining work: M0 verification/checkpoint, M1–M10.
-- Exact next action: confirm initial commit, record its SHA, then inspect tracked reference workflow at its pinned revision.
+- Stage: VERIFIED through M1.2; publication NOT STARTED.
+- Current task: M2.1. Last verified completed: M1.2.
+- Branch: main. Last verified committed anchor: c47987087b0ee56189cc276d5c0a399e742b1035. Current checkpoint: inspect HEAD.
+- Working tree: current verified unit being checkpointed; inspect Git reality.
+- Architecture: see DECISIONS.md.
+- Last successful checks: PASS: 26 tracked workflow files pinned and hashed; 36 unique matrix rows cover all eight classifications and 13 required columns; three recent public PR bodies inspected. Original source unchanged. M0 checkpoint c479870 verified; initial sandbox auth failure resolved by network-enabled gh check; local-only initial identity amended to verified noreply before publication.
+- Known failing tests: none recorded for completed unit. Untested later work remains TODO.
+- Pending reviews: later task gates, final security/licensing/full-suite/publication.
+- Blockers: none for local work. Network-enabled gh authentication verified as target owner.
+- External side effects: no target remote created or push attempted.
+- Remaining work: next task and later TODO rows in plan.
+- Exact next action: execute M2.1 acceptance checks after reviewing current Git state.
