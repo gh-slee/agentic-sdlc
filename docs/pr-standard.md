@@ -1,0 +1,7 @@
+# PR authoring and validation
+
+The canonical reusable template is `templates/pull_request.md`; `templates/pr-standard.json` defines required headings, evidence categories and optional section order. The GitHub template provides the same required shape. Use a problem/outcome sentence, grouped path bullets, and separate local, CI, independent review and project checks. Include relevant compatibility, risk, breaking change, rollback, reviewer, visual, issue and follow-up sections; omit empty ones.
+
+Run `python3 scripts/check_pr.py --body-file PATH --head FULL_REVIEWED_SHA`. Exit 0 means valid shape/revision equality, 1 means violations, 2 means input failure. The output includes body SHA-256; this is not a signature or proof of truth. Local PASS/FAIL bullets include an actual backtick command and `passed=N failed=N skipped=N`. Other evidence needs actual results and links or explicit gaps. NOT RUN is valid structure but may block a project gate. Do not call self-review independent QA.
+
+Use the sdlc-pr-write skill for the evidence-driven workflow. Supply that exact validated body to `gh pr create/edit --body-file` or an explicit supported API body, then read it back. PR creation/edit requires applicable authority. Changed code invalidates affected evidence; update source metadata and evidence, rerun checks, and never reuse a stale body digest. CI formatting checks cannot prove the tests ran or grant publication/merge permission.

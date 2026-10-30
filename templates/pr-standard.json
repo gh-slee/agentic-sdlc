@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "required": [
+    "Change Summary",
+    "Files Changed",
+    "Testing & Evidence"
+  ],
+  "evidence": [
+    "Local Verification",
+    "CI Verification",
+    "Independent QA / Architecture Review",
+    "Additional Project Checks"
+  ],
+  "optional": [
+    "Behavior and Compatibility",
+    "Risks and Limitations",
+    "Breaking Changes",
+    "Rollback",
+    "Reviewer Focus",
+    "Visual Evidence",
+    "Related Issues",
+    "Follow-up Work"
+  ]
+}
