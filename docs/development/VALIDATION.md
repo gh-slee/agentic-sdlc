@@ -35,3 +35,7 @@ Anchor: `2e06d8dd23dd23b6af7b4577ad12589671d0b58c` plus this unit's diff. PASS: 
 ## M7.2 — 2026-10-30
 
 Anchor: `be9c344c7f5106c84d38d92d41d69bfd4f8f6a8c` plus this unit's diff. PASS: 34 unittest tests pass, 0 fail/error/skip, including five real disposable Git portability installations and NOOP repeats with byte-identical project files and identical core payload. Actual reference compatibility command passes: baseline source publication guard PASS; added candidate skill rejected as required; 26 original workflow files preserved; source HEAD/status unchanged. Both actual source semantic review reports validate. Source adoption correctly BLOCKED pending maintainer allowlist review; no real source changes. Full application toolchain builds and independent agent behavioral evaluations are not claimed.
+
+## M8.2 — 2026-10-30
+
+Anchor: `e84cb50f88ce06caef5214c8d215e2700200772f` plus this unit's diff. PASS: focused recovery suite 14/14 and full suite 48/48, 0 fail/error/skip. All twelve mandatory scenarios exercised; files and HEAD preserved, no remote actions executed. Fresh subprocess reconstructs next task solely from on-disk artifacts. Initial focused import error corrected and rerun passed. CHECKPOINT.json adds revision-bound artifact fingerprints and actual test counts; diagnostic consistency is not signed test proof or human consent. Nineteen workflow evaluation scenarios distinguish executable mechanisms from unrun independent/model behavior.

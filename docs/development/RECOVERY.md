@@ -13,3 +13,5 @@ Use: "Resume development of agentic-sdlc from its persisted implementation state
 9. Continue next authorized incomplete task, verify, update state/evidence, review security/diff and create a local checkpoint. Record its SHA as the next anchor. Continue while permitted. No background resumption after usage reset is assumed.
 
 Initial publication alone is authorized after release gates; other external writes, delegation, merges and deployments need their own authority. Source repository stays read-only. Stronger project rules are preserved.
+
+Use `python3 scripts/recover.py --root .` for a read-only consistency diagnostic. Inspect `CHECKPOINT.json` artifact hashes and actual validation evidence; it never retries external writes or authenticates approvals. See `docs/recovery-validation.md` for exercised scenarios and limits.
