@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "operation": "ADOPTION",
+  "source": {
+    "repository": "synthetic/docs",
+    "revision": "1111111111111111111111111111111111111111"
+  },
+  "framework": {
+    "version": "0.1.0",
+    "revision": "2222222222222222222222222222222222222222"
+  },
+  "inspected_refs": [
+    {
+      "id": "R1",
+      "path": "AGENTS.md",
+      "revision": "1111111111111111111111111111111111111111",
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "rule": "project approvals",
+      "classification": "PROJECT_SPECIFIC",
+      "evidence": [
+        "R1"
+      ],
+      "observation": "Synthetic policy requires review before remote writes.",
+      "recommendation": "Preserve the project gate."
+    }
+  ],
+  "conflicts": [],
+  "preserved_controls": [
+    "Project approval before remote writes"
+  ],
+  "proposed_modifications": [
+    {
+      "path": ".sdlc/install.json",
+      "action": "ADD",
+      "reason": "Record pinned baseline after review.",
+      "evidence": [
+        "R1"
+      ]
+    }
+  ],
+  "risk": {
+    "profile": "STANDARD",
+    "rationale": "Governance adoption needs semantic and file review."
+  },
+  "missing_information": [],
+  "required_validation": [
+    "Verify existing project controls remain byte-identical."
+  ],
+  "decision_status": "READY_FOR_REVIEW"
+}

@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gh-slee/agentic-sdlc/schemas/review-v1.schema.json",
+  "title": "Evidence-backed SDLC review report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "operation",
+    "source",
+    "framework",
+    "inspected_refs",
+    "findings",
+    "conflicts",
+    "preserved_controls",
+    "proposed_modifications",
+    "risk",
+    "missing_information",
+    "required_validation",
+    "decision_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "ADOPTION",
+        "UPSTREAM"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "revision"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "framework": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "revision"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "inspected_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "path",
+          "revision",
+          "sha256"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "rule",
+          "classification",
+          "evidence",
+          "observation",
+          "recommendation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "CONFLICTING_CHANGE",
+              "CONFLICTING_OR_LEGACY",
+              "DOMAIN_SPECIFIC",
+              "FRAMEWORK_BUG_FIX",
+              "GENERIC_CONFIGURABLE",
+              "NEEDS_REVIEW",
+              "NO_REUSABLE_CHANGE",
+              "OPTIONAL_CAPABILITY",
+              "OPTIONAL_WORKFLOW",
+              "PRIVATE_LOCAL",
+              "PROJECT_SPECIFIC",
+              "SECURITY_REGRESSION",
+              "TOOL_ADAPTER_IMPROVEMENT",
+              "TOOL_INTEGRATION",
+              "UNIVERSAL_CORE",
+              "UNIVERSAL_IMPROVEMENT"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "observation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rule",
+          "blocking",
+          "reason",
+          "resolution"
+        ],
+        "properties": {
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "preserved_controls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "proposed_modifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "action",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "ADD",
+              "KEEP",
+              "MODIFY",
+              "REVIEW"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "rationale"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "enum": [
+            "LIGHT",
+            "STANDARD",
+            "STRICT"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "required_validation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "decision_status": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_REVIEW",
+        "NEEDS_REVIEW",
+        "BLOCKED"
+      ]
+    }
+  }
+}

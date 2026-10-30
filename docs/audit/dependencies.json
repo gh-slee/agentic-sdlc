@@ -1,0 +1,50 @@
+[
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "metadata_license": "MIT",
+    "classifiers": [],
+    "source": "https://pypi.org/project/attrs/26.1.0/",
+    "wheel_hash_count": 1
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.25.1",
+    "metadata_license": "MIT",
+    "classifiers": [],
+    "source": "https://pypi.org/project/jsonschema/4.25.1/",
+    "wheel_hash_count": 1
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "metadata_license": "MIT",
+    "classifiers": [],
+    "source": "https://pypi.org/project/jsonschema-specifications/2025.9.1/",
+    "wheel_hash_count": 1
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "metadata_license": "MIT",
+    "classifiers": [],
+    "source": "https://pypi.org/project/referencing/0.37.0/",
+    "wheel_hash_count": 1
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "metadata_license": "MIT",
+    "classifiers": [],
+    "source": "https://pypi.org/project/rpds-py/2026.9.1/",
+    "wheel_hash_count": 127
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "metadata_license": "PSF-2.0",
+    "classifiers": [],
+    "source": "https://pypi.org/project/typing_extensions/4.16.0/",
+    "wheel_hash_count": 1
+  }
+]

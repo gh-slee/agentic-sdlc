@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "operation": "UPSTREAM",
+  "source": {
+    "repository": "synthetic/docs",
+    "revision": "1111111111111111111111111111111111111111"
+  },
+  "framework": {
+    "version": "0.1.0",
+    "revision": "2222222222222222222222222222222222222222"
+  },
+  "inspected_refs": [
+    {
+      "id": "R1",
+      "path": "AGENTS.md",
+      "revision": "1111111111111111111111111111111111111111",
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "rule": "Evidence freshness",
+      "classification": "UNIVERSAL_IMPROVEMENT",
+      "evidence": [
+        "R1"
+      ],
+      "observation": "Synthetic workflow records source revision with each test result.",
+      "recommendation": "Generalize revision-bound evidence."
+    }
+  ],
+  "conflicts": [],
+  "preserved_controls": [
+    "Project approval before remote writes"
+  ],
+  "proposed_modifications": [
+    {
+      "path": "core/evidence.md",
+      "action": "MODIFY",
+      "reason": "Clarify revision freshness without project commands.",
+      "evidence": [
+        "R1"
+      ]
+    }
+  ],
+  "risk": {
+    "profile": "STANDARD",
+    "rationale": "Governance adoption needs semantic and file review."
+  },
+  "missing_information": [],
+  "required_validation": [
+    "Verify existing project controls remain byte-identical."
+  ],
+  "decision_status": "READY_FOR_REVIEW"
+}
