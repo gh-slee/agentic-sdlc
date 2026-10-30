@@ -39,3 +39,7 @@ Anchor: `be9c344c7f5106c84d38d92d41d69bfd4f8f6a8c` plus this unit's diff. PASS: 
 ## M8.2 — 2026-10-30
 
 Anchor: `e84cb50f88ce06caef5214c8d215e2700200772f` plus this unit's diff. PASS: focused recovery suite 14/14 and full suite 48/48, 0 fail/error/skip. All twelve mandatory scenarios exercised; files and HEAD preserved, no remote actions executed. Fresh subprocess reconstructs next task solely from on-disk artifacts. Initial focused import error corrected and rerun passed. CHECKPOINT.json adds revision-bound artifact fingerprints and actual test counts; diagnostic consistency is not signed test proof or human consent. Nineteen workflow evaluation scenarios distinguish executable mechanisms from unrun independent/model behavior.
+
+## M9.1 — 2026-10-30
+
+Anchor: `2f4bc242d329f53130ceca8412c03fda0a029060` plus this unit's diff. PASS: core/skill structural validation; six security regression tests and two PR-event tests; 65 Markdown files checked for local targets; worktree 114 entries and reachable history 123 entries pass publication scans before this evidence update. Official action pins and six dependency/license records reviewed; OSV reports no advisories at this date (not proof of absence). Full final suite and post-commit staged/history scans remain M9.2. A synthetic credential URL initially self-triggered the worktree scanner; fixture construction corrected without weakening checks.

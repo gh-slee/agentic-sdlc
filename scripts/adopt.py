@@ -11,8 +11,8 @@ ROOT=Path(__file__).resolve().parents[1]
 VENDOR='.sdlc/agentic-sdlc/'
 MANIFEST='.sdlc/install.json'
 JOURNAL='.sdlc/adoption-pending.json'
-DISTRIBUTED=('core/','roles/','profiles/','workflows/','templates/','schemas/','scripts/','.agents/skills/')
-ROOT_FILES={'VERSION','LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','requirements.lock'}
+DISTRIBUTED=('core/','roles/','profiles/','workflows/','templates/','schemas/','.agents/skills/')
+ROOT_FILES={'VERSION','LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','requirements.lock','scripts/adopt.py','scripts/check_framework.py','scripts/check_pr.py','scripts/check_report.py','scripts/sdlc_io.py'}
 
 
 def encoded(value):return (json.dumps(value,sort_keys=True,indent=2)+'\n').encode()

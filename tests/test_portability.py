@@ -3,6 +3,8 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import adopt
 from sdlc_io import digest
 from test_adoption import fixture,report_for,run_git

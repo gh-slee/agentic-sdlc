@@ -23,10 +23,11 @@ def regular_path(root,relative,allow_missing=False):
     root=Path(root)
     if root.is_symlink() or not root.is_dir(): raise ValueError('Root must be a real directory')
     current=root
-    for part in PurePosixPath(relative).parts:
+    parts=PurePosixPath(relative).parts
+    for position,part in enumerate(parts):
         current=current/part
         if current.is_symlink(): raise ValueError('Symlink component refused')
-        if current.exists() and part != PurePosixPath(relative).parts[-1] and not current.is_dir(): raise ValueError('Non-directory ancestor refused')
+        if current.exists() and position < len(parts)-1 and not current.is_dir(): raise ValueError('Non-directory ancestor refused')
         if not current.exists() and allow_missing: continue
         if not current.exists(): raise ValueError('Missing path')
     return current

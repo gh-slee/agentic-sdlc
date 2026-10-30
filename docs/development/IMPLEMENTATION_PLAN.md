@@ -22,7 +22,7 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M7.2 | Reference compatibility simulation | M7.1 | Disposable tracked workflow copy retains stricter controls and allowlists | DONE |
 | M8.1 | Recovery diagnostic and scenarios | M7.2 | All twelve mandatory recovery scenarios exercised | DONE |
 | M8.2 | Context-free recovery exercise | M8.1 | Artifacts alone identify safe next task without destructive operations | DONE |
-| M9.1 | Open-source docs licensing CI | M8.2 | All required guides license notices and least-privilege CI reviewed | IN_PROGRESS |
-| M9.2 | Full tests and publication security gate | M9.1 | Tracked/staged/history/secrets/paths/symlinks/dependencies reviewed | TODO |
+| M9.1 | Open-source docs licensing CI | M8.2 | All required guides license notices and least-privilege CI reviewed | DONE |
+| M9.2 | Full tests and publication security gate | M9.1 | Tracked/staged/history/secrets/paths/symlinks/dependencies reviewed | IN_PROGRESS |
 | M10.1 | Reconcile remote and publish | M9.2 | Correct authenticated owner; create/push only incomplete authorized steps | TODO |
 | M10.2 | Verify public publication | M10.1 | Visibility default branch SHA README LICENSE CI remotely confirmed | TODO |

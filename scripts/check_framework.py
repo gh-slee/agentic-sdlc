@@ -50,6 +50,16 @@ def check(root=ROOT):
             for target in re.findall(r'\[[^\]]+\]\(([^)#]+)(?:#[^)]*)?\)', text):
                 if '://' not in target and not (path.parent / target).is_file():
                     errors.append(str(path.relative_to(root)) + ': missing reference ' + target)
+    skill_root=root / '.agents/skills'
+    expected_skills={'sdlc-pr-write','sdlc-adopt-review','sdlc-upstream-review'}
+    found=set()
+    for path in skill_root.glob('*/SKILL.md'):
+        found.add(path.parent.name)
+        text=path.read_text()
+        metadata=re.match(r'\A---\nname: ([a-z0-9-]+)\ndescription: (.+)\n---\n\n\S',text)
+        if not metadata or metadata[1]!=path.parent.name or len(metadata[1])>=64:
+            errors.append('Malformed skill metadata: '+path.parent.name)
+    if found!=expected_skills: errors.append('Expected three native SDLC skills')
     return errors
 
 

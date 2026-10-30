@@ -1,0 +1,35 @@
+name: Governance validation
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --only-binary=:all: --require-hashes -r requirements.lock
+      - run: python scripts/check_framework.py
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/check_report.py examples/reports/adoption.json
+      - run: python scripts/check_report.py examples/reports/upstream.json
+      - run: python scripts/check_publication.py --mode worktree
+      - run: python scripts/check_publication.py --mode index
+      - run: python scripts/check_publication.py --mode history
+      - if: github.event_name == 'pull_request'
+        run: python scripts/check_pr_event.py

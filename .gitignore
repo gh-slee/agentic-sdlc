@@ -1,5 +1,10 @@
+# Private execution context and isolated dependencies
+.local/
 .venv/
 __pycache__/
 *.pyc
-.local/
 .coverage
+.DS_Store
+AGENTS.override.md
+.env
+.env.*

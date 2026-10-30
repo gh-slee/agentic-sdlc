@@ -1,5 +1,5 @@
 {
-  "anchor_revision": "e84cb50f88ce06caef5214c8d215e2700200772f",
+  "anchor_revision": "2f4bc242d329f53130ceca8412c03fda0a029060",
   "artifact_hashes": {
     ".agents/skills/sdlc-adopt-review/SKILL.md": "a841d3eab3f77408b6a3000bc7ae53fc5027700da5948816cdef722af6af0544",
     ".agents/skills/sdlc-pr-write/SKILL.md": "84de93a0b6d61c36877789f021541cb2ac07069de4ebd3f6ff56dfe6afa68c7d",
@@ -17,13 +17,15 @@
     "roles/qa.md": "b21128bb0a88169e10f66ac650bd254b0c9361fd3c68c37c790f52c4939aafdf",
     "roles/requirements.md": "8587742a891db691f2737b0c8bed6e691d7eb5355d661bfe93038992703a4e31",
     "schemas/review-v1.schema.json": "352ed74be1f4dbb664e2b10178b64621b14c519a51ad5c0de508ed5f6e031f9d",
-    "scripts/adopt.py": "47510a8a5b42d506403737b4d9e1f46c4028cd37498b72a59891dda92bfd8a98",
-    "scripts/check_framework.py": "30d767803581d58faba6db1c6ed10670c041f1a50ab5af2debe2254cdbd9faa1",
+    "scripts/adopt.py": "a5f5815c99d70a1877449a103b640243e3e252b0aac6ccb58d823b88bd150364",
+    "scripts/check_framework.py": "5f3cbe5a93aa8d0dbd2e5d375e362ac7709aeb4f624a6ed83f7e9772fa19a2db",
     "scripts/check_pr.py": "34ab1015d12850ddeea90ecefdee5ee6265ecf2d3ef18211f95ef4c253907a29",
+    "scripts/check_pr_event.py": "a6403c8e5475c1c8766d51028a5c375499937eb2fac92b0ddf89b3c194ab3422",
+    "scripts/check_publication.py": "94d3d65e751b6164b0a370c00e0d801dc46030b789b23516d6312b74c81da185",
     "scripts/check_reference_compatibility.py": "1c47bac3186eda9f51490d07efa0d84aa490d65fc7228411cf0e42d7803babed",
     "scripts/check_report.py": "572b06614ce225f53db9c49c5ad83bc0d9000fccebbc46f5766e045620ff8175",
     "scripts/recover.py": "5ad8f23472cb78e49c8f89d1a2e4897d2bd8d36eeaaafcc4205e6e5dfcc28d70",
-    "scripts/sdlc_io.py": "459f8163d45ebb7bda007c435b68181ccbe0955d76ded27b309fb2f28d0160af",
+    "scripts/sdlc_io.py": "787afb9a37760638b06dc0751f6ca45bfb5c2a5a2c3d9d7f487c35176cf4b54c",
     "templates/handoff.md": "ea5c1027daabed5a895e0f6912f1971ff2fe9042d3bffb9da1a5c8abe10555f0",
     "templates/pr-standard.json": "a2f3170825c871055bd98e969fd049e9a710a19e11bfe2b764fdfa6adbbce175",
     "templates/pull_request.md": "8afb140e3fdea0001c7359327173668fa600d2e7370b62f58c821d6845390f7d",
@@ -52,10 +54,12 @@
     "tests/fixtures/projects/react-app/src/Label.tsx": "021db0595399d7d246fed146f6ad279997351579846a3b890e04adb83541cce6",
     "tests/test_adoption.py": "df57ae1bdbea3d72d1e60fdd48f83ca1c1e208fa3120feca5af9012faf8aafb7",
     "tests/test_framework.py": "5bf2efca4407e5d364629b5781d05a047fabb886cc47cbf7f9735c900ad9c269",
-    "tests/test_portability.py": "eee9845eb93059cb9fc2a64bbecfd43e9ea7e4ef39b443cf813d1e0151b40948",
+    "tests/test_portability.py": "63bc68f20f0265548cd88cb98c016a253c05106868f9cb9a092cd155c64f98b6",
     "tests/test_pr.py": "d0f3946ac9d8aaf516d1e616dcbd54a6822a2903b29d93d14fdd903297f6f952",
+    "tests/test_pr_event.py": "84100f016788ffd89b374b09e53ff550c75b22a05778466f238afcfbdfdda8b8",
     "tests/test_recovery.py": "bb7f06f61ed831696359fa968ca2c4179b475e721ea1c707bac6e22674c27ac8",
     "tests/test_reports.py": "85014094fee13c3af147cddae18ecc95a4dc52337f9b1fa4c01227d5ff2352f5",
+    "tests/test_security.py": "a7afcbb21d9da32abe98d6fbe96d8cd1296eaeb176e5fa85274c9e491a1ad384",
     "workflows/architecture.md": "80e9176ebf363b8c844f0c090af318a1fce76d6bf1bddcdad8136705f1fa919f",
     "workflows/bugfix.md": "cf836737d3064bcef22ffd095ff4b3eac808c6551076adef0cadadc44a69e4b2",
     "workflows/documentation.md": "e74477a60caba3b2697aac76df7992e1c0a4bd20ef70bf0db8791dcd7e8ad477",
@@ -67,13 +71,13 @@
     "workflows/upstream.md": "d9d94719897ef67912efd9996ea640e6e9fb8df57ddd3dd868a86657ee531ae0",
     "workflows/verification.md": "ef009ffb39277b671da47cf755e3ba79eea8b68d878284b04a7f9c28c8ad078e"
   },
-  "current_task": "M9.1",
+  "current_task": "M9.2",
   "schema_version": "1.0.0",
   "verification": {
-    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_security.py -v",
     "failed": 0,
     "outcome": "PASS",
-    "passed": 48,
+    "passed": 6,
     "skipped": 0
   },
   "verified_tasks": [
@@ -94,6 +98,7 @@
     "M7.1",
     "M7.2",
     "M8.1",
-    "M8.2"
+    "M8.2",
+    "M9.1"
   ]
 }
