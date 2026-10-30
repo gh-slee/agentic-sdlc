@@ -51,3 +51,7 @@ Anchor: `ed560ad5458d641848099551dce94d357a02809f` plus this unit's diff. PASS: 
 ## M10.1 — 2026-10-30
 
 Anchor: `b6c874fbab062498bcd447bb2b07845153a571ae` plus this unit's diff. PASS: authorized public repository created and main pushed without force; remote gh-slee/agentic-sdlc owner/public visibility/default main verified; remote commit b6c874fbab062498bcd447bb2b07845153a571ae equals local initial publication; credential-free fetch/push URLs match target; README LICENSE and CI configuration bytes read back and match. Connected GitHub API independently reports public/main. Actual CI is pending; no tags/release/deployment created.
+
+## M10.2 CI correction — 2026-10-30
+
+Initial public run 41009743059 at b6c874f failed before creating any jobs. No test failure or CI success was claimed. Local PyYAML reproduced ScannerError at line 26: unquoted pip --only-binary option contains colon-space. Converted the run command to a YAML block scalar; safe_load now passes and verifies exact command/read-only permissions. Implementation/test files are unchanged from the passing 56-test candidate; full code tests are not rerun solely for this CI syntax correction. Actual corrected remote CI remains pending. Local publication checkpoint f2028ac preserves successful remote creation/read-back; no recreate/force push is needed.
