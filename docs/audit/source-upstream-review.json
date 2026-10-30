@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "operation": "UPSTREAM",
+  "source": {
+    "repository": "https://github.com/gh-slee/wealth-ledger",
+    "revision": "df039e3015f40f844507ae310182132d341c2617"
+  },
+  "framework": {
+    "version": "0.1.0",
+    "revision": "be9c344c7f5106c84d38d92d41d69bfd4f8f6a8c"
+  },
+  "inspected_refs": [
+    {
+      "id": "R1",
+      "path": "AGENTS.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "b065bfed7509e592a530e05bb9376cb3334b4656a607a9bdc5477767fe8a7e22"
+    },
+    {
+      "id": "R2",
+      "path": ".gitignore",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "6f9fa3b9ba8c73161a12d91f86f52ba4ecf8f4fbe638e22674be1e76b600756d"
+    },
+    {
+      "id": "R3",
+      "path": "docs/spec-development.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "cb7091c1496606bda7f3f7cc353dcedc8b831e8ae5874c156d79679a1788a1cb"
+    },
+    {
+      "id": "R4",
+      "path": "docs/agent-development.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "e2a7368b59b48c56794cf42a75058456daf05537b9223fef4f5402fba2bc59b4"
+    },
+    {
+      "id": "R5",
+      "path": "scripts/check_publication.py",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "a38757de409cf634d6c420a4f860188aa24ec1fbdbb1f359c9306d1788b28878"
+    },
+    {
+      "id": "R6",
+      "path": "scripts/dev_publish.py",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "4fd37705e544253a572af52d793aaa2c6cd2f133fbb275149293d08bea98e49f"
+    }
+  ],
+  "findings": [
+    {
+      "id": "U1",
+      "rule": "Exact reviewed PR body",
+      "classification": "NO_REUSABLE_CHANGE",
+      "evidence": [
+        "R6"
+      ],
+      "observation": "Source publisher fingerprints and rechecks the body before explicit create/edit. The current generic PR workflow already preserves exact validated bytes.",
+      "recommendation": "Retain existing core behavior; avoid duplicating policy."
+    },
+    {
+      "id": "U2",
+      "rule": "Project precision and publication path set",
+      "classification": "DOMAIN_SPECIFIC",
+      "evidence": [
+        "R1",
+        "R5"
+      ],
+      "observation": "Finance precision rules and literal source-only publication paths depend on the originating product.",
+      "recommendation": "Keep local; test the general invariant-preservation and safe-path principles instead."
+    }
+  ],
+  "conflicts": [],
+  "preserved_controls": [
+    "Existing AGENTS.md and four role skills",
+    "Exact spec revision/hash Gate A and human acceptance Gate B",
+    "Single writer and paused-claim transfer protocol",
+    "Independent QA and current source test requirements",
+    "Candidate-image gate including docs-only PRs",
+    "Literal skill publication allowlist and history guard",
+    "Domain precision, history and locale invariants"
+  ],
+  "proposed_modifications": [],
+  "risk": {
+    "profile": "STRICT",
+    "rationale": "Preserve consequential source project gates and publication boundaries."
+  },
+  "missing_information": [],
+  "required_validation": [
+    "Retain exact-body freshness tests and source-specific invariants locally."
+  ],
+  "decision_status": "READY_FOR_REVIEW"
+}

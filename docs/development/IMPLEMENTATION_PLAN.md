@@ -18,9 +18,9 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M5.2 | Structured report examples and negative tests | M5.1 | Invalid evidence classifications injection and unavailable model handled | DONE |
 | M6.1 | Controlled adoption and provenance | M5.2 | New/existing/no-op/partial adoption preserve local files | DONE |
 | M6.2 | Safe updates and rollback documentation | M6.1 | Pinned version commit hashes and reviewed manual update path demonstrated | DONE |
-| M7.1 | Five portability fixtures and domain audit | M6.2 | CLI frontend API infrastructure docs fixtures use same core | IN_PROGRESS |
-| M7.2 | Reference compatibility simulation | M7.1 | Disposable tracked workflow copy retains stricter controls and allowlists | TODO |
-| M8.1 | Recovery diagnostic and scenarios | M7.2 | All twelve mandatory recovery scenarios exercised | TODO |
+| M7.1 | Five portability fixtures and domain audit | M6.2 | CLI frontend API infrastructure docs fixtures use same core | DONE |
+| M7.2 | Reference compatibility simulation | M7.1 | Disposable tracked workflow copy retains stricter controls and allowlists | DONE |
+| M8.1 | Recovery diagnostic and scenarios | M7.2 | All twelve mandatory recovery scenarios exercised | IN_PROGRESS |
 | M8.2 | Context-free recovery exercise | M8.1 | Artifacts alone identify safe next task without destructive operations | TODO |
 | M9.1 | Open-source docs licensing CI | M8.2 | All required guides license notices and least-privilege CI reviewed | TODO |
 | M9.2 | Full tests and publication security gate | M9.1 | Tracked/staged/history/secrets/paths/symlinks/dependencies reviewed | TODO |

@@ -31,3 +31,7 @@ Anchor: `0e59c829584bfc6f9fcb6b003b4a84b32e469b36` plus this unit's diff. PASS: 
 ## M6.2 — 2026-10-30
 
 Anchor: `2e06d8dd23dd23b6af7b4577ad12589671d0b58c` plus this unit's diff. PASS: 29 unittest tests, 29 pass, 0 fail/error/skip, including real temporary Git repositories for install/no-op/byte preservation/conflicts/revision and digest checks/strict overrides/symlinks/interrupted and partial application. Baseline files and effective profile come from the exact committed source; changed project config invalidates plan. Only known committed content distributed. Manual reviewed updates/rollback documented; automatic upgrades intentionally unsupported.
+
+## M7.2 — 2026-10-30
+
+Anchor: `be9c344c7f5106c84d38d92d41d69bfd4f8f6a8c` plus this unit's diff. PASS: 34 unittest tests pass, 0 fail/error/skip, including five real disposable Git portability installations and NOOP repeats with byte-identical project files and identical core payload. Actual reference compatibility command passes: baseline source publication guard PASS; added candidate skill rejected as required; 26 original workflow files preserved; source HEAD/status unchanged. Both actual source semantic review reports validate. Source adoption correctly BLOCKED pending maintainer allowlist review; no real source changes. Full application toolchain builds and independent agent behavioral evaluations are not claimed.

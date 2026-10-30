@@ -1,0 +1,12 @@
+{
+  "profile": "LIGHT",
+  "additional_requirements": [
+    "preserve-project-invariants"
+  ],
+  "test_commands": [
+    "python -m unittest"
+  ],
+  "invariants": [
+    "Whitespace normalization remains stable."
+  ]
+}

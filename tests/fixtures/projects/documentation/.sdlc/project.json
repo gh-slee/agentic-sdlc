@@ -1,0 +1,12 @@
+{
+  "profile": "LIGHT",
+  "additional_requirements": [
+    "preserve-project-invariants"
+  ],
+  "test_commands": [
+    "python scripts/check_links.py"
+  ],
+  "invariants": [
+    "Published documentation remains accurate."
+  ]
+}

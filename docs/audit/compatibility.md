@@ -1,0 +1,7 @@
+# Reference compatibility
+
+Run `.venv/bin/python scripts/check_reference_compatibility.py --source REFERENCE_ROOT` when the pinned source is locally available. The checker uses read-only Git inspection with optional locks disabled, validates all 26 tracked workflow hashes, and copies only that reviewed set into a disposable ignored directory. It runs the source publication guard before and after staging a synthetic new skill path, then verifies all original bytes and source Git/status are unchanged. No source application data or private overrides are read. No source dependency/runtime/real instance is used.
+
+Expected result: baseline guard passes; new skill path is rejected. This is successful preservation of a stricter control, and blocks real adoption until the source maintainer explicitly reviews any allowlist change. This mission does not authorize that change. Existing instructions, four role skills, exact-spec approvals, ownership rules, independent QA, candidate-image gate, test requirements and domain invariants remain byte-identical.
+
+See `reference-adoption-review.json`, `source-upstream-review.json` and actual command results in development validation. The compatibility probe stages a deliberately forbidden file only inside its disposable copy; it does not publish or alter the originating repository. It is an optional locally executed source check; CI needs no access to that repository.

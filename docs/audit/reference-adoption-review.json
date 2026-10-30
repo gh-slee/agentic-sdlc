@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "operation": "ADOPTION",
+  "source": {
+    "repository": "https://github.com/gh-slee/wealth-ledger",
+    "revision": "df039e3015f40f844507ae310182132d341c2617"
+  },
+  "framework": {
+    "version": "0.1.0",
+    "revision": "be9c344c7f5106c84d38d92d41d69bfd4f8f6a8c"
+  },
+  "inspected_refs": [
+    {
+      "id": "R1",
+      "path": "AGENTS.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "b065bfed7509e592a530e05bb9376cb3334b4656a607a9bdc5477767fe8a7e22"
+    },
+    {
+      "id": "R2",
+      "path": ".gitignore",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "6f9fa3b9ba8c73161a12d91f86f52ba4ecf8f4fbe638e22674be1e76b600756d"
+    },
+    {
+      "id": "R3",
+      "path": "docs/spec-development.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "cb7091c1496606bda7f3f7cc353dcedc8b831e8ae5874c156d79679a1788a1cb"
+    },
+    {
+      "id": "R4",
+      "path": "docs/agent-development.md",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "e2a7368b59b48c56794cf42a75058456daf05537b9223fef4f5402fba2bc59b4"
+    },
+    {
+      "id": "R5",
+      "path": "scripts/check_publication.py",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "a38757de409cf634d6c420a4f860188aa24ec1fbdbb1f359c9306d1788b28878"
+    },
+    {
+      "id": "R6",
+      "path": "scripts/dev_publish.py",
+      "revision": "df039e3015f40f844507ae310182132d341c2617",
+      "sha256": "4fd37705e544253a572af52d793aaa2c6cd2f133fbb275149293d08bea98e49f"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "rule": "Source skill publication allowlist",
+      "classification": "PROJECT_SPECIFIC",
+      "evidence": [
+        "R2",
+        "R4",
+        "R5"
+      ],
+      "observation": "Only four literal role skill paths have source publication exceptions. New SDLC skill files are outside that set.",
+      "recommendation": "Retain the allowlist; block real adoption pending explicit maintainer review."
+    },
+    {
+      "id": "F2",
+      "rule": "Stronger project acceptance",
+      "classification": "GENERIC_CONFIGURABLE",
+      "evidence": [
+        "R1",
+        "R3"
+      ],
+      "observation": "Exact revision Gate A, serialized reservations, independent QA, candidate-image gate and merge/integration closeout exceed lightweight defaults.",
+      "recommendation": "Select STRICT and retain all additional source gates."
+    },
+    {
+      "id": "F3",
+      "rule": "Domain invariants",
+      "classification": "DOMAIN_SPECIFIC",
+      "evidence": [
+        "R1"
+      ],
+      "observation": "Project precision, history and locale requirements are specialized source invariants.",
+      "recommendation": "Keep them in project instructions and tests, outside the core."
+    }
+  ],
+  "conflicts": [
+    {
+      "rule": "New skill paths",
+      "blocking": true,
+      "reason": "Generic installation would add paths prohibited by the current source publication allowlist.",
+      "resolution": "Explicit maintainer policy review in that project; no changes authorized in this mission."
+    }
+  ],
+  "preserved_controls": [
+    "Existing AGENTS.md and four role skills",
+    "Exact spec revision/hash Gate A and human acceptance Gate B",
+    "Single writer and paused-claim transfer protocol",
+    "Independent QA and current source test requirements",
+    "Candidate-image gate including docs-only PRs",
+    "Literal skill publication allowlist and history guard",
+    "Domain precision, history and locale invariants"
+  ],
+  "proposed_modifications": [
+    {
+      "path": ".sdlc/agentic-sdlc",
+      "action": "REVIEW",
+      "reason": "Optional pinned baseline only after conflict resolution.",
+      "evidence": [
+        "R2",
+        "R4",
+        "R5"
+      ]
+    }
+  ],
+  "risk": {
+    "profile": "STRICT",
+    "rationale": "Preserve consequential source project gates and publication boundaries."
+  },
+  "missing_information": [
+    "No authorization to change source allowlists; real adoption is outside scope."
+  ],
+  "required_validation": [
+    "Run read-only disposable compatibility checker.",
+    "Retain byte-identical source workflow rules and publication guard."
+  ],
+  "decision_status": "BLOCKED"
+}

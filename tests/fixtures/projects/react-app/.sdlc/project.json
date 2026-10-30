@@ -1,0 +1,12 @@
+{
+  "profile": "STANDARD",
+  "additional_requirements": [
+    "preserve-project-invariants"
+  ],
+  "test_commands": [
+    "npm test"
+  ],
+  "invariants": [
+    "Visible labels retain accessible text."
+  ]
+}

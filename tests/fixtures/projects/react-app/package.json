@@ -1,0 +1,1 @@
+{"name": "synthetic-label-ui", "private": true, "scripts": {"test": "vitest run", "build": "tsc && vite build"}}

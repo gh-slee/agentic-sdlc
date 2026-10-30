@@ -1,0 +1,12 @@
+{
+  "profile": "STRICT",
+  "additional_requirements": [
+    "preserve-project-invariants"
+  ],
+  "test_commands": [
+    "terraform validate"
+  ],
+  "invariants": [
+    "No apply or live resource changes without environment approval."
+  ]
+}
