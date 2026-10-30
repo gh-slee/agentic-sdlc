@@ -30,6 +30,7 @@ def validate(report):
     for item in report['findings']+report['proposed_modifications']:
         if any(e not in refs for e in item['evidence']):errors.append('Unknown source evidence reference')
     for change in report['proposed_modifications']:
+        if change['path']=='@discovery':errors.append('Discovery receipt is not a writable repository path')
         try:safe_relative(change['path'])
         except ValueError:errors.append('Unsafe proposed modification path')
     blocking=any(c['blocking'] for c in report['conflicts']) or any(f['classification']=='SECURITY_REGRESSION' for f in report['findings'])

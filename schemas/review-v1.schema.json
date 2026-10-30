@@ -84,7 +84,8 @@
           },
           "path": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "A tracked public source path, or reserved @discovery for the revision-bound deterministic policy inventory receipt."
           },
           "revision": {
             "type": "string",

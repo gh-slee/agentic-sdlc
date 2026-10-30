@@ -23,6 +23,7 @@ def fixture(root,custom=True):
 def report_for(root):
     discovery=adopt.discover(root);revision,version,_=adopt.baseline()
     refs=[dict(r,id='R'+str(i),revision=discovery['revision']) for i,r in enumerate(discovery['policies'])]
+    if not refs:refs=[{'id':'R0','path':'@discovery','revision':discovery['revision'],'sha256':discovery['inventory_sha256']}]
     return {'schema_version':'1.0.0','operation':'ADOPTION','source':{'repository':'synthetic/project','revision':discovery['revision']},'framework':{'version':version,'revision':revision},'inspected_refs':refs,'findings':[],'conflicts':[],'preserved_controls':['Existing project instructions remain unchanged.'],'proposed_modifications':[{'path':'.sdlc/agentic-sdlc','action':'ADD','reason':'Namespaced pinned baseline.','evidence':[refs[0]['id']]}],'risk':{'profile':'STANDARD','rationale':'Synthetic adoption mechanics test; semantic judgment is not being evaluated.'},'missing_information':[],'required_validation':['Compare original instructions byte-for-byte.'],'decision_status':'READY_FOR_REVIEW'}
 
 
@@ -119,3 +120,22 @@ class AdoptionTests(unittest.TestCase):
         proposal=self.proposal();path.write_text('{"invariants":["changed"]}')
         with self.assertRaises(ValueError):self.apply(proposal)
         self.assertFalse((self.root/adopt.MANIFEST).exists())
+
+    def test_empty_committed_repository_uses_verified_inventory_evidence(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            run_git(root,'init','-b','main');run_git(root,'config','user.name','Synthetic');run_git(root,'config','user.email','synthetic@example.invalid');run_git(root,'commit','--allow-empty','-m','Synthetic empty baseline')
+            report=report_for(root)
+            self.assertEqual(report['inspected_refs'][0]['path'],'@discovery')
+            proposal=adopt.plan(root,report);data=adopt.encoded(proposal)
+            self.assertEqual(adopt.apply(root,data,digest(data))['result'],'INSTALLED')
+            self.assertEqual(adopt.apply(root,data,digest(data))['result'],'NOOP')
+            self.assertFalse((root/'AGENTS.md').exists())
+            self.assertFalse((root/'@discovery').exists())
+            # A different source inventory invalidates the same receipt.
+            report=report_for(root);(root/'AGENTS.md').write_text('New project rule')
+            run_git(root,'add','AGENTS.md')
+            with self.assertRaises(ValueError):adopt.plan(root,report)
+            run_git(root,'reset','--','AGENTS.md')
+            altered=report_for(root);altered['inspected_refs'][0]['sha256']='0'*64
+            with self.assertRaises(ValueError):adopt.plan(root,altered)

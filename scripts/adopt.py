@@ -44,7 +44,8 @@ def discover(target):
         path=regular_path(target,name)
         if not path.is_file() or path.stat().st_size>1024*1024:raise ValueError('Unsupported policy file')
         refs.append({'path':name,'sha256':digest(path.read_bytes())})
-    return {'revision':revision,'policies':sorted(refs,key=lambda r:r['path']),'limits':'Tracked public policy files only; no semantic interpretation or ignored/private instructions.'}
+    inventory={'revision':revision,'policies':sorted(refs,key=lambda r:r['path'])}
+    return {**inventory,'inventory_sha256':digest(encoded(inventory)),'limits':'Tracked public policy files only; no semantic interpretation or ignored/private instructions. @discovery refers to this revision-bound inventory, including an empty policy set.'}
 
 
 def baseline():
@@ -83,6 +84,7 @@ def plan(target,report):
     revision,version,files=baseline()
     if report['source']['revision']!=discovery['revision'] or report['framework']!={'version':version,'revision':revision}:raise ValueError('Stale source or framework revision')
     observed={r['path']:r['sha256'] for r in discovery['policies']}
+    observed['@discovery']=discovery['inventory_sha256']
     for ref in report['inspected_refs']:
         if observed.get(ref['path'])!=ref['sha256']:raise ValueError('Source evidence missing or changed')
     config=project_config(target);profile=report['risk']['profile'];ranks={'LIGHT':0,'STANDARD':1,'STRICT':2}
