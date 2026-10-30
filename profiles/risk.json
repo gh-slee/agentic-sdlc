@@ -1,0 +1,58 @@
+{
+  "LIGHT": {
+    "use": "Small reversible low-risk changes",
+    "requirements": [
+      "scope",
+      "focused_verification",
+      "truthful_evidence"
+    ],
+    "planning": "Brief outcome and acceptance",
+    "spec": "Current task is sufficient if project permits",
+    "architecture": "When interfaces change",
+    "approval": "Existing task authority unless project requires more",
+    "independent_qa": "Optional unless project requires",
+    "security": "Review affected boundaries"
+  },
+  "STANDARD": {
+    "use": "Ordinary features bugs and refactoring",
+    "requirements": [
+      "scope",
+      "acceptance_cases",
+      "negative_cases",
+      "baseline",
+      "focused_verification",
+      "regression_verification",
+      "truthful_evidence"
+    ],
+    "planning": "Bounded plan and dependencies",
+    "spec": "Acceptance and risks with stable references",
+    "architecture": "Review contracts and decisions as affected",
+    "approval": "Verify scope authority and project gates",
+    "independent_qa": "Risk-based; required by stronger project policy",
+    "security": "Review privacy trust and dependency changes"
+  },
+  "STRICT": {
+    "use": "Consequential security integrity migrations authorization privacy infrastructure",
+    "requirements": [
+      "scope",
+      "acceptance_cases",
+      "negative_cases",
+      "baseline",
+      "focused_verification",
+      "regression_verification",
+      "truthful_evidence",
+      "exact_spec",
+      "architecture_review",
+      "independent_qa",
+      "security_review",
+      "rollback",
+      "human_gates"
+    ],
+    "planning": "Versioned spec, decisions, dependencies and rollback",
+    "spec": "Exact revision/hash with project-required human review",
+    "architecture": "Required review of changed contracts",
+    "approval": "Required applicable human gates; no fabricated records",
+    "independent_qa": "Required independent reviewer and expectations",
+    "security": "Required affected-boundary review"
+  }
+}

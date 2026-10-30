@@ -10,9 +10,9 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M1.2 | Preservation matrix and boundaries | M1.1 | Every material rule classified with enforcement and migration risk | DONE |
 | M2.1 | Current framework research | M1.2 | Seven official frameworks and modern Spec Kit features compared | DONE |
 | M2.2 | Build versus reuse ADR | M2.1 | Minimal architecture and licenses justified | DONE |
-| M3.1 | Core roles profiles lifecycle workflows | M2.2 | Five complete role contracts and distinct lifecycle/authority states | IN_PROGRESS |
-| M3.2 | Structural conformance checks | M3.1 | Core references metadata profiles and override boundaries tested | TODO |
-| M4.1 | PR template skill validator | M3.2 | Mandatory sections and evidence states validated with fixtures | TODO |
+| M3.1 | Core roles profiles lifecycle workflows | M2.2 | Five complete role contracts and distinct lifecycle/authority states | DONE |
+| M3.2 | Structural conformance checks | M3.1 | Core references metadata profiles and override boundaries tested | DONE |
+| M4.1 | PR template skill validator | M3.2 | Mandatory sections and evidence states validated with fixtures | IN_PROGRESS |
 | M4.2 | PR workflow regression tests | M4.1 | Valid invalid stale/missing evidence cases pass expected assertions | TODO |
 | M5.1 | Review skills and structured contract | M4.2 | Adoption/upstream read-only workflows and schema implemented | TODO |
 | M5.2 | Structured report examples and negative tests | M5.1 | Invalid evidence classifications injection and unavailable model handled | TODO |

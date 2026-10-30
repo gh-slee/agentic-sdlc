@@ -15,3 +15,7 @@ Anchor: `c47987087b0ee56189cc276d5c0a399e742b1035` plus this unit's diff. PASS: 
 ## M2.2 — 2026-10-30
 
 Anchor: `5b9ed012c0bce2e1e0c0d28b5754e0e2035e6048` plus this unit's diff. PASS: seven official repositories resolved to full commits with README/license hashes; Spec Kit reference pages inspect presets extensions workflows overlays bundles and update limits; licensing text inspected including BMAD trademark notice. ADR-001 compares A/B/C and selects original hybrid core with optional adapters. No third-party execution or installation.
+
+## M3.2 — 2026-10-30
+
+Anchor: `95ad60894c0bddf730de6d6076e921971c05e9d5` plus this unit's diff. PASS: check_framework.py reports no violations; unittest discover executes 4 tests, 4 pass, 0 fail/error/skip. Tests reject incomplete role contracts, broken references, weakened STRICT requirements, invalid profiles and domain/stack assumptions; project additions preserve base requirements. Guidance enforcement and human authority limitations explicit.
