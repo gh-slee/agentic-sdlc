@@ -1,0 +1,253 @@
+{
+  "as_of": "2026-10-30",
+  "method": "Official repository metadata and commit-pinned documentation; no competing systems installed.",
+  "repositories": [
+    {
+      "repository": "github/spec-kit",
+      "revision": "2a23a848f888de05f0107061d45232c485d6bae0",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-29T21:55:58Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "3baa99368443f26244b3a021b40eaf6f167ee591f5759c91315ad50d0a204592",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/README.md"
+        },
+        {
+          "path": "docs/community/bundles.md",
+          "sha256": "ceacb31ca896453fd247730547bbc1fd78aa92963be48a8fe2bf031929fb606c",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/community/bundles.md"
+        },
+        {
+          "path": "docs/community/extensions.md",
+          "sha256": "5cc9f9651c565de7f708ffde1adb1f7ce03b5cbedfdc2a9f3266de16116c58fd",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/community/extensions.md"
+        },
+        {
+          "path": "docs/community/presets.md",
+          "sha256": "531813352e02ce60d27521c537aef6b38fa8684075110fd0a33ac62e766a432a",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/community/presets.md"
+        },
+        {
+          "path": "docs/community/workflow-steps.md",
+          "sha256": "6151540582d48bb80b5d92be50dc5c17143c5e67848b4f61dba69959e3a4dce5",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/community/workflow-steps.md"
+        },
+        {
+          "path": "docs/extensions/api.md",
+          "sha256": "de32a474517fb1f5b981b7b1b0ced67aca202a95bfd28c66b3f0a1580614163a",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/extensions/api.md"
+        },
+        {
+          "path": "docs/extensions/developing.md",
+          "sha256": "f9d14601a6fba0883f84c9398f4b554e9d7207a68dd9e7696052d7ab81e4db17",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/extensions/developing.md"
+        },
+        {
+          "path": "docs/extensions/overview.md",
+          "sha256": "6a0a164241bd2d2444476549a911635a6d2596cabc5e9bd66008b42a79aefd35",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/extensions/overview.md"
+        },
+        {
+          "path": "docs/extensions/publishing.md",
+          "sha256": "2d1d5d5ba3fbbfeaace722febd387c12987c56df6ea84cf850f408ee22649071",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/extensions/publishing.md"
+        },
+        {
+          "path": "docs/reference/bundles.md",
+          "sha256": "de89743f7ff4d927a8a87f3ae058c3b02a94d5d0fdf1ce01e6c17e16f9efe96d",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/reference/bundles.md"
+        },
+        {
+          "path": "docs/reference/extensions.md",
+          "sha256": "3b3f3dd2399ad32c8b4814582bd42a96b6323dd8fc09781ce6158f032ddece6a",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/reference/extensions.md"
+        },
+        {
+          "path": "docs/reference/presets.md",
+          "sha256": "4be2ef43283a1517c9bf13b782f41594a91ba73f582c058f196c6d2b2d0be824",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/reference/presets.md"
+        },
+        {
+          "path": "docs/reference/workflows.md",
+          "sha256": "53891fa374c7a5deceb6b9d756bbe494e5f432f3ad3992df7301706fbe03a454",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/reference/workflows.md"
+        },
+        {
+          "path": "docs/upgrade.md",
+          "sha256": "94c895deffa444e2608966b217d2c026d1b8fe2b587fd4e864e0c5d01f37d33e",
+          "url": "https://github.com/github/spec-kit/blob/2a23a848f888de05f0107061d45232c485d6bae0/docs/upgrade.md"
+        }
+      ]
+    },
+    {
+      "repository": "bmad-code-org/BMAD-METHOD",
+      "revision": "61e01f82644c4bb533750cfa0d6d61ab61d2cc9b",
+      "default_branch": "main",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "archived": false,
+      "pushed_at": "2026-10-27T18:57:00Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "0aa79baf6328b4a1e694ce10a12ffc36d7666554da128dff0e8fcda0fc536a66",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/61e01f82644c4bb533750cfa0d6d61ab61d2cc9b/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "8a4384a5ea8f44a06303a3fd612d1f0ba49a92aecf34de634112f693db9b6659",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/61e01f82644c4bb533750cfa0d6d61ab61d2cc9b/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-29T23:35:34Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "intellectronica/ruler",
+      "revision": "5e551e60952fb1c81c6c5ad6f5fe8b7a412bda87",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-28T17:08:04Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "2e75163f9ae893ac57365a3f111ea3d30de298d214a121cccc96f97063b6bcfd",
+          "url": "https://github.com/intellectronica/ruler/blob/5e551e60952fb1c81c6c5ad6f5fe8b7a412bda87/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "08ab52c04bd97bcbf831fead33ae9e12a9ab38be5ffd5b379ff2f399820bbb25",
+          "url": "https://github.com/intellectronica/ruler/blob/5e551e60952fb1c81c6c5ad6f5fe8b7a412bda87/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "nobug-project/rulesync",
+      "revision": "9c2ab989245bc21bee7bf64b467cf2b435fc26dd",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-21T09:42:25Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "200e0a84c60f3b2ffeecf8f2f00bfc9f8c7713d95d2168f9e934664b29e72476",
+          "url": "https://github.com/nobug-project/rulesync/blob/9c2ab989245bc21bee7bf64b467cf2b435fc26dd/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "a2f8a0e1218b420b584bb0832e9d675a62bbd89f1dc5fcb63c84a70c1eb35d05",
+          "url": "https://github.com/nobug-project/rulesync/blob/9c2ab989245bc21bee7bf64b467cf2b435fc26dd/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Fission-AI/OpenSpec",
+      "revision": "6d04a1b58dedc95729d34e4f223d9d483aae210a",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-29T23:21:41Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "c3c7235bea1214ab62df643473975c2e8b8848f528901a976693f7d069713e64",
+          "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "a64074d2eebc76e9b27ef7989175e74540b14bdf81028665a4f4c461881b825e",
+          "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "open-gsd/gsd-core",
+      "revision": "ee04e24544ba710dcd479c9cc2451588baa6f59e",
+      "default_branch": "next",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-10-29T20:59:48Z",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "3a160aec61eeb28e75e8017346ee190db07986a09c4bd72555cc706f1d99e27e",
+          "url": "https://github.com/open-gsd/gsd-core/blob/ee04e24544ba710dcd479c9cc2451588baa6f59e/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "66fe062ee3705af835b09ffa8da112fd14bc8a6025f0d4fb22b4291d353268a9",
+          "url": "https://github.com/open-gsd/gsd-core/blob/ee04e24544ba710dcd479c9cc2451588baa6f59e/README.md"
+        }
+      ]
+    }
+  ]
+}

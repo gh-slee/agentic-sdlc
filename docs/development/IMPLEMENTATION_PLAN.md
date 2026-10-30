@@ -8,9 +8,9 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M0.2 | Initialize safe Git checkpoint | M0.1 | Reviewed public-safe initial commit on main | DONE |
 | M1.1 | Tracked source audit and provenance | M0.2 | Material workflow files and representative PR evidence inspected | DONE |
 | M1.2 | Preservation matrix and boundaries | M1.1 | Every material rule classified with enforcement and migration risk | DONE |
-| M2.1 | Current framework research | M1.2 | Seven official frameworks and modern Spec Kit features compared | IN_PROGRESS |
-| M2.2 | Build versus reuse ADR | M2.1 | Minimal architecture and licenses justified | TODO |
-| M3.1 | Core roles profiles lifecycle workflows | M2.2 | Five complete role contracts and distinct lifecycle/authority states | TODO |
+| M2.1 | Current framework research | M1.2 | Seven official frameworks and modern Spec Kit features compared | DONE |
+| M2.2 | Build versus reuse ADR | M2.1 | Minimal architecture and licenses justified | DONE |
+| M3.1 | Core roles profiles lifecycle workflows | M2.2 | Five complete role contracts and distinct lifecycle/authority states | IN_PROGRESS |
 | M3.2 | Structural conformance checks | M3.1 | Core references metadata profiles and override boundaries tested | TODO |
 | M4.1 | PR template skill validator | M3.2 | Mandatory sections and evidence states validated with fixtures | TODO |
 | M4.2 | PR workflow regression tests | M4.1 | Valid invalid stale/missing evidence cases pass expected assertions | TODO |

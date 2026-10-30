@@ -1,0 +1,27 @@
+# Build versus reuse research
+
+Inspected official repository metadata, license text and commit-pinned READMEs on 2026-10-30. Spec Kit reference pages were also inspected. [Machine-readable provenance](framework-research.json) records hashes and exact revisions. These are documentation/source observations, not integration test results or guarantees. No framework was installed.
+
+| Framework | Useful capabilities | Distribution, updates and limits | Decision / maintenance cost |
+|---|---|---|---|
+| [github/spec-kit](https://github.com/github/spec-kit/tree/2a23a848f888de05f0107061d45232c485d6bae0) | Spec-driven artifacts; presets/extensions/workflows/overlays/bundles; agent integrations | Commit/version pins and manifests; bundle provenance/shared-component conflicts; preset update removes then adds; failed refresh can leave modified components | Optional adapter later; Python/uv and upstream execution surface exceed core needs |
+| [bmad-code-org/BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD/tree/61e01f82644c4bb533750cfa0d6d61ab61d2cc9b) | Roles, right-sized planning, existing-codebase workflows and durable context | Stable and preview tracks differ; setup refreshes project and removes renamed skills; preview warns of breaking updates | Reuse concepts only; broad role/workflow footprint; MIT text with trademark notice despite API NOASSERTION |
+| [obra/superpowers](https://github.com/obra/superpowers/tree/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b) | Composable development skills; design/planning/testing/review; Codex app plugin | Updates depend on host plugin; agent-driven execution cannot provide our project-specific approval guarantees | Optional external methodology; default subagent-oriented flow requires separate authorization |
+| [intellectronica/ruler](https://github.com/intellectronica/ruler/tree/5e551e60952fb1c81c6c5ad6f5fe8b7a412bda87) | Centralized rule distribution and native tool/skill adapters | Apply generates files; backups/revert and dry-run; MCP and ignore propagation defaults require review; nested mode experimental | No multi-agent distribution requirement yet; avoid introducing another canonical policy tree |
+| [nobug-project/rulesync](https://github.com/nobug-project/rulesync/tree/9c2ab989245bc21bee7bf64b467cf2b435fc26dd) | Rules/commands/skills/permissions across agent targets; import/generate | Multi-surface generated configuration requires target review; ignore feature deprecated in favor of permissions | Useful future adapter; more configuration and runtime than one initial adapter needs |
+| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec/tree/6d04a1b58dedc95729d34e4f223d9d483aae210a) | Change/delta specs and brownfield incremental adoption; optional exploration/verification | Init/update tool-generated skills and artifacts; archives preserve changes; flexible workflow does not itself enforce our approval gates | Optional specification backend; retain stable report contract rather than require OpenSpec |
+| [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core/tree/ee04e24544ba710dcd479c9cc2451588baa6f59e) | Disk-backed phased planning/execution/verification and pause/resume | Runtime-specific installer required; structured state; significant subagent and hook surface; source README links recovery guides | Good recovery concepts; do not import independent-agent execution or installer transformations |
+
+## Spec Kit detail
+
+Presets supply templates/commands/scripts and resolution priority. Extensions add agent commands and hooks. Workflows compose prompts, shell steps, conditional flows and human checkpoints with durable run state. Overlays modify installed workflow behavior without a fork. Bundles compose versioned components and record provenance, rejecting incompatible shared pins. Codex integration is documented, but no Spec Kit execution in this desktop environment is claimed.
+
+The pinned `docs/reference/presets.md` explicitly says updates remove then add, may remove local modifications, and offer no staging or rollback transaction. `docs/reference/bundles.md` says failed refreshes do not roll back previously modified installed components; pin enforcement also has legacy unversioned-catalog exceptions. `docs/reference/workflows.md` distinguishes persisted state from save failures. A manifest is useful provenance, not proof of safe updates or human consent.
+
+For v0.1.0 use native skill files plus namespaced versioned content and a deliberately small add-only adoption helper. Provide a reviewed manual update/rollback procedure using Git instead of reimplementing a package manager. Spec Kit Bundle/Presets integration remains P1, requiring its own disposable compatibility tests.
+
+## Licenses and known limits
+
+All seven fetched license files use MIT terms. BMAD additionally contains a trademark notice; GitHub API labels it NOASSERTION, so license text was inspected rather than trusting API classification. No upstream code, skill text, templates or runtime is vendored. Original writing and original validators will use Apache-2.0. Preserve upstream rights if copying is introduced later. Source audit project is MIT, but its implementation is not copied.
+
+Known limitations above come from inspected docs. Issue trackers and test suites were not exhaustively audited; no claim is made that unlisted bugs are absent. Maintenance cadence is recorded as API `pushed_at`, not inferred from stars. Core policy must not depend on a changing upstream default branch.
