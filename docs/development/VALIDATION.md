@@ -47,3 +47,7 @@ Anchor: `2f4bc242d329f53130ceca8412c03fda0a029060` plus this unit's diff. PASS: 
 ## M9.2 — 2026-10-30
 
 Anchor: `ed560ad5458d641848099551dce94d357a02809f` plus this unit's diff. PASS: final committed candidate ed560ad full suite 56/56 in 37.535s, 0 failures/errors/skips; clean committed clone also 56/56 without ignored context. Installed core/PR/report validators and discovery pass, licenses present, private/build-state payload excluded, repeat NOOP. Four report CLIs, core conformance and pip check pass. Worktree/index each 115 entries and reachable history 153 entries pass scans; source and staged diffs reviewed. Mandatory local gates satisfied. Publication not attempted yet; next action reconcile authenticated gh-slee/agentic-sdlc state before authorized public create/push.
+
+## M10.1 — 2026-10-30
+
+Anchor: `b6c874fbab062498bcd447bb2b07845153a571ae` plus this unit's diff. PASS: authorized public repository created and main pushed without force; remote gh-slee/agentic-sdlc owner/public visibility/default main verified; remote commit b6c874fbab062498bcd447bb2b07845153a571ae equals local initial publication; credential-free fetch/push URLs match target; README LICENSE and CI configuration bytes read back and match. Connected GitHub API independently reports public/main. Actual CI is pending; no tags/release/deployment created.
