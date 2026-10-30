@@ -22,7 +22,7 @@ class ReportTests(unittest.TestCase):
             r=self.report();mutate(r);self.assertTrue(validate(r))
 
     def test_unsafe_paths_are_never_executed(self):
-        for path in ('../outside','/etc/passwd','.git/config','AGENTS.override.md','a/../../escape','a\\escape','.local/private','./README.md'):
+        for path in ('.','.GIT/config','../outside','/etc/passwd','.git/config','AGENTS.override.md','a/../../escape','a\\escape','.local/private','./README.md'):
             r=self.report();r['proposed_modifications'][0]['path']=path;self.assertTrue(validate(r))
 
     def test_blocking_conflicts_missing_information_and_regressions(self):

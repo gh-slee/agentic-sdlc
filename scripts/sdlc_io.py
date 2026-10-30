@@ -11,7 +11,7 @@ def safe_relative(value):
     if not isinstance(value,str) or not value or '\\' in value or any(ord(c)<32 for c in value):
         raise ValueError('Unsafe repository-relative path')
     path=PurePosixPath(value)
-    if path.is_absolute() or path.as_posix()!=value or any(x in ('.','..','.git','.local') for x in path.parts):
+    if path.is_absolute() or not path.parts or path.as_posix()!=value or any(x.casefold() in ('.','..','.git','.local') for x in path.parts):
         raise ValueError('Unsafe repository-relative path')
     if any(x.casefold() in ('agents.override.md','.env') for x in path.parts):
         raise ValueError('Private path excluded')
@@ -26,6 +26,7 @@ def regular_path(root,relative,allow_missing=False):
     for part in PurePosixPath(relative).parts:
         current=current/part
         if current.is_symlink(): raise ValueError('Symlink component refused')
+        if current.exists() and part != PurePosixPath(relative).parts[-1] and not current.is_dir(): raise ValueError('Non-directory ancestor refused')
         if not current.exists() and allow_missing: continue
         if not current.exists(): raise ValueError('Missing path')
     return current

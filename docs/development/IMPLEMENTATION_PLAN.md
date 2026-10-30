@@ -16,9 +16,9 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M4.2 | PR workflow regression tests | M4.1 | Valid invalid stale/missing evidence cases pass expected assertions | DONE |
 | M5.1 | Review skills and structured contract | M4.2 | Adoption/upstream read-only workflows and schema implemented | DONE |
 | M5.2 | Structured report examples and negative tests | M5.1 | Invalid evidence classifications injection and unavailable model handled | DONE |
-| M6.1 | Controlled adoption and provenance | M5.2 | New/existing/no-op/partial adoption preserve local files | IN_PROGRESS |
-| M6.2 | Safe updates and rollback documentation | M6.1 | Pinned version commit hashes and reviewed manual update path demonstrated | TODO |
-| M7.1 | Five portability fixtures and domain audit | M6.2 | CLI frontend API infrastructure docs fixtures use same core | TODO |
+| M6.1 | Controlled adoption and provenance | M5.2 | New/existing/no-op/partial adoption preserve local files | DONE |
+| M6.2 | Safe updates and rollback documentation | M6.1 | Pinned version commit hashes and reviewed manual update path demonstrated | DONE |
+| M7.1 | Five portability fixtures and domain audit | M6.2 | CLI frontend API infrastructure docs fixtures use same core | IN_PROGRESS |
 | M7.2 | Reference compatibility simulation | M7.1 | Disposable tracked workflow copy retains stricter controls and allowlists | TODO |
 | M8.1 | Recovery diagnostic and scenarios | M7.2 | All twelve mandatory recovery scenarios exercised | TODO |
 | M8.2 | Context-free recovery exercise | M8.1 | Artifacts alone identify safe next task without destructive operations | TODO |

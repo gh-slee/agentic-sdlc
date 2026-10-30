@@ -1,14 +1,14 @@
 # Implementation state
 
-- Stage: VERIFIED through M5.2; publication NOT STARTED.
-- Current task: M6.1. Last verified completed: M5.2.
-- Branch: main. Last verified committed anchor: 0e59c829584bfc6f9fcb6b003b4a84b32e469b36. Current checkpoint: inspect HEAD.
+- Stage: VERIFIED through M6.2; publication NOT STARTED.
+- Current task: M7.1. Last verified completed: M6.2.
+- Branch: main. Last verified committed anchor: 2e06d8dd23dd23b6af7b4577ad12589671d0b58c. Current checkpoint: inspect HEAD.
 - Working tree: current verified unit being checkpointed; inspect Git reality.
 - Architecture: see DECISIONS.md.
-- Last successful checks: PASS: locked hash-verified venv install; 18 unittest tests pass, 0 fail/error/skip; both report example CLIs and both skill metadata checks pass. Negative cases include unsupported confidence/status, missing/unknown evidence, operation classification, unsafe paths, stale source revision, unresolved conflicts/security regression and inert injection text. Synthetic reports are explicitly illustrative; no independent agent behavioral evaluation claimed. Initial system urllib certificate failure corrected using system curl with TLS verification enabled; no trust bypass.
+- Last successful checks: PASS: 29 unittest tests, 29 pass, 0 fail/error/skip, including real temporary Git repositories for install/no-op/byte preservation/conflicts/revision and digest checks/strict overrides/symlinks/interrupted and partial application. Baseline files and effective profile come from the exact committed source; changed project config invalidates plan. Only known committed content distributed. Manual reviewed updates/rollback documented; automatic upgrades intentionally unsupported.
 - Known failing tests: none recorded for completed unit. Untested later work remains TODO.
 - Pending reviews: later task gates, final security/licensing/full-suite/publication.
 - Blockers: none for local work. Network-enabled gh authentication verified as target owner.
 - External side effects: no target remote created or push attempted.
 - Remaining work: next task and later TODO rows in plan.
-- Exact next action: execute M6.1 acceptance checks after reviewing current Git state.
+- Exact next action: execute M7.1 acceptance checks after reviewing current Git state.
