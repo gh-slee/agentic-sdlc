@@ -1,6 +1,6 @@
 # Agentic SDLC repository instructions
 
-Read `docs/development/CHARTER.md`, `IMPLEMENTATION_STATE.md`, `IMPLEMENTATION_PLAN.md`, `DECISIONS.md`, and `RECOVERY.md` in `docs/development/` before implementation. Git and filesystem evidence override notes. Preserve existing work.
+For ordinary contributions, read `CONTRIBUTING.md` and task-relevant core/workflow guidance; the initial-build mission is complete. For initial-mission recovery or evidence reconciliation, read `CHARTER.md`, `IMPLEMENTATION_STATE.md`, `IMPLEMENTATION_PLAN.md`, `DECISIONS.md`, `VALIDATION.md`, and `RECOVERY.md` under `docs/development/`. Git and filesystem evidence override notes. Preserve existing work.
 
 Only this repository is writable under the initial mission. The reference repository is read-only; inspect tracked workflow files only, never private owner instructions or real user data. Do not spawn independent writers, alter global agent settings, merge, deploy, or modify other repositories.
 

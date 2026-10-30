@@ -25,4 +25,4 @@ All tasks P0. P1: optional Spec Kit integration/advanced updates/additional adap
 | M9.1 | Open-source docs licensing CI | M8.2 | All required guides license notices and least-privilege CI reviewed | DONE |
 | M9.2 | Full tests and publication security gate | M9.1 | Tracked/staged/history/secrets/paths/symlinks/dependencies reviewed | DONE |
 | M10.1 | Reconcile remote and publish | M9.2 | Correct authenticated owner; create/push only incomplete authorized steps | DONE |
-| M10.2 | Verify public publication | M10.1 | Visibility default branch SHA README LICENSE CI remotely confirmed | IN_PROGRESS |
+| M10.2 | Verify public publication | M10.1 | Visibility default branch SHA README LICENSE CI remotely confirmed | DONE |
