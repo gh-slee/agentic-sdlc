@@ -188,6 +188,12 @@ Local setup, tests and publication checks live in [CONTRIBUTING.md](CONTRIBUTING
 
 To resume the initial framework mission or reconcile interrupted work, read [current state](docs/development/IMPLEMENTATION_STATE.md), [the charter](docs/development/CHARTER.md) and [recovery instructions](docs/development/RECOVERY.md), then inspect actual Git, filesystem and remote state. These records support a new chat without conversation history or a fixed model. Automatic continuation after a usage reset is not provided.
 
+## Support this project
+
+If you find this project useful, consider [sponsoring on GitHub](https://github.com/sponsors/gh-slee) to support ongoing development, bug fixes, testing, documentation, and maintenance.
+
+Sponsorship is entirely optional. All features remain free and open source.
+
 ## License
 
 Original code and documentation are [Apache-2.0 licensed](LICENSE). Source-workflow acknowledgments and dependency licenses are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Third-party frameworks and trademarks retain their owners' rights.
