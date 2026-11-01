@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/gh-slee/agentic-sdlc/actions/workflows/ci.yml"><img src="https://github.com/gh-slee/agentic-sdlc/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status on main"></a>
+  <a href="https://github.com/sponsors/gh-slee"><img src="https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" alt="Sponsor gh-slee on GitHub"></a>
   <a href="#coding-agent-skills"><img src="https://img.shields.io/badge/Agent-Codex-202C36?style=flat-square" alt="Codex reference adapter"></a>
   <a href="#tech-stack"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Framework tools require Python 3.12 or newer"></a>
   <a href="#quick-start"><img src="https://img.shields.io/badge/Tools-macOS%20%7C%20Linux-208C8A?style=flat-square" alt="Framework tools tested on macOS and Linux"></a>
@@ -20,7 +21,8 @@
   <a href="#adopt-in-your-project">Adopt in your project</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#documentation">Documentation</a> ·
-  <a href="CONTRIBUTING.md">Contribute</a>
+  <a href="CONTRIBUTING.md">Contribute</a> ·
+  <a href="#support-this-project">Support</a>
 </p>
 
 **Agentic SDLC is an open-source framework for planning, implementing and reviewing software changes with coding agents.** Keep requirements, role handoffs, quality checks and verification evidence in versioned files that travel with your repository. Use the same core across different languages, products and deployment environments while retaining your project's own rules.
@@ -190,7 +192,11 @@ To resume the initial framework mission or reconcile interrupted work, read [cur
 
 ## Support this project
 
-If you find this project useful, consider [sponsoring on GitHub](https://github.com/sponsors/gh-slee) to support ongoing development, bug fixes, testing, documentation, and maintenance.
+I'm building Agentic SDLC to make working with coding agents easier to review and maintain. If it helps you ship useful work, sponsorship gives me more time to improve the tooling, keep the examples current and write clearer guides.
+
+[❤️ Sponsor on GitHub](https://github.com/sponsors/gh-slee)
+
+You can also help with a [star](https://github.com/gh-slee/agentic-sdlc/stargazers), a [bug report](https://github.com/gh-slee/agentic-sdlc/issues) or a [contribution](CONTRIBUTING.md). Thank you!
 
 Sponsorship is entirely optional. All features remain free and open source.
 
