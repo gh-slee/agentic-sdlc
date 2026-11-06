@@ -8,6 +8,8 @@ from sdlc_io import regular_path,safe_relative
 
 ROOT=Path(__file__).resolve().parents[1]
 PATTERNS=(('private key',rb'-----BEGIN (?:[A-Z0-9 ]+ )?PRIVATE KEY-----'),('GitHub credential',rb'\bgh[pousr]_[A-Za-z0-9]{20,}\b|\bgithub_pat_[A-Za-z0-9_]{30,}\b'),('cloud credential',rb'\b(?:AKIA|ASIA)[A-Z0-9]{16}\b'),('credential URL',rb'https?://[^\s/:]+:[^\s/@]+@'),('machine home path',rb'/(?:Users|home)/[A-Za-z0-9_.-]+/'))
+# Ticket backlog files are public by design (tickets/README.md); content checks still apply.
+TICKET_FILE=re.compile(r'tickets/[A-Za-z0-9][A-Za-z0-9_-]*\.md')
 NOREPLY=re.compile(r'(?:[0-9]+\+)?[A-Za-z0-9-]+@users\.noreply\.github\.com\Z')
 
 
@@ -24,7 +26,7 @@ def allowed_path(name,allowed):
     if any(x.casefold() in {'private','__pycache__','node_modules','.codex','.venv','.local'} or x.startswith('.venv') for x in parts):return False
     if any(x.casefold().startswith('.env') for x in parts):return False
     if Path(name).suffix.casefold() in {'.pem','.key','.db','.sqlite','.sqlite3','.p12','.pfx','.log','.zip','.pyc'}:return False
-    return name in allowed
+    return name in allowed or bool(TICKET_FILE.fullmatch(name))
 
 
 def content_issues(data):
