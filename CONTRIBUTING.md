@@ -17,3 +17,5 @@ python3 -m venv .venv
 Use GitHub noreply commit identities with repository-local settings. Review/stage explicit paths and run `git diff --cached --check`. New public paths require deliberate PUBLIC_FILES.json review. Preserve notices and update dependency pins/hashes/provenance when needed. No global configuration change is required. Windows is not validated; adoption uses POSIX directory-relative no-follow APIs.
 
 Follow [the PR standard](docs/pr-standard.md), exact-body/revision checks and applicable project gates. Report actual results/counts/CI/review gaps. Self-tests are not independent QA. For initial-build continuation read [recovery](docs/development/RECOVERY.md); ordinary contributions need not repeat the full original build mission.
+
+Planned and in-progress work lives in [tickets/](tickets/README.md); claim a ticket with `scripts/tickets.py` before writing, especially when several agents work at once.

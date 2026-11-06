@@ -30,6 +30,13 @@ class SecurityTests(unittest.TestCase):
     def test_private_paths_never_allowed_even_in_manifest(self):
         for name in ['.local/state.json','nested/AGENTS.override.md','.env.production','key.pem','../escape','.GIT/config']:
             self.assertFalse(guard.allowed_path(name,{name}))
+    def test_ticket_files_public_by_pattern_only(self):
+        for name in ['tickets/ASD-P0-001.md','tickets/README.md']:self.assertTrue(guard.allowed_path(name,set()))
+        for name in ['tickets/.env.md','tickets/sub/ASD-P0-001.md','tickets/ASD-P0-001.txt','tickets/.hidden.md','other/tickets/README.md','tickets/../README.md']:
+            self.assertFalse(guard.allowed_path(name,set()))
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);self.repo(root);(root/'tickets').mkdir();(root/'tickets/ABC-P0-001.md').write_text('Synthetic ticket.\n');self.assertTrue(guard.audit(root,'worktree')['passed'])
+            (root/'tickets/ABC-P0-002.md').write_text('/'+'/'.join(['Users','synthetic','private','file']));self.assertFalse(guard.audit(root,'worktree')['passed'])
     def test_symlink_modes_and_repeated_ancestors_refused(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);self.repo(root);(root/'README.md').unlink();(root/'README.md').symlink_to('PUBLIC_FILES.json');run_git(root,'add','README.md')

@@ -8,3 +8,6 @@ __pycache__/
 AGENTS.override.md
 .env
 .env.*
+
+# agent ticket claims and worktrees
+/work/
